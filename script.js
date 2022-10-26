@@ -179,6 +179,18 @@ quoteChanger()
 
 // Part 9 Select all .blog-post class elements. Iterate through the list of .blog-post class elements and apply two event handlers to each node. The first event handler should be listening for mouseout events while the second handler should be listening for mouseenter events.
 
+const blogPosts = document.querySelectorAll(".blog-post")
+
+blogPosts.forEach((post) => {
+  post.addEventListener("mouseenter", function() {
+    post.classList.toggle("red")
+  })
+  post.addEventListener("mouseout", function () {
+    post.classList.toggle("red")
+  })
+  
+})
+
 // The mouseouthandler should toggle the class .purple
 // The mouseenterhandler should toggle the class .red
 // Test it out!
